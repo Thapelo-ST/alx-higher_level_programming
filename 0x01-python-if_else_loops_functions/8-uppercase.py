@@ -7,4 +7,4 @@ def uppercase(str):
         else:
             caps = i
         capped_str += caps
-    print(capped_str)
+    print("{}".format(capped_str))
