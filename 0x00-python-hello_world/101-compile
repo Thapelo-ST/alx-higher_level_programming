@@ -1,0 +1,5 @@
+#!/bin/bash
+PYFILE=$PYFILE
+OUTP="${PYFILE%.*}c.pyc"
+python3 -m compileall $PYFILE
+mv $PYFILE $OUTP
