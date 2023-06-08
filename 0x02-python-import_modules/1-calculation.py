@@ -10,5 +10,5 @@ if __name__ == "__main__":
     ans = "{} + {} = {} \n".format(a, b, tot) + \
         "{} - {} = {} \n".format(a, b, diff) + \
         "{} * {} = {} \n".format(a, b, prod) + \
-        "{} / {} = {}".format(a, b, quo)
+        "{a} / {b} = {quo}"#.format(a, b, quo)
     print(ans)
