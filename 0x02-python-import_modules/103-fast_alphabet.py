@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 import string
-_ = print(*(string.ascii_uppercase), sep='')
+print(chr(ord('A') + len(string.ascii_uppercase) - 1))
