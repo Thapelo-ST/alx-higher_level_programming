@@ -8,7 +8,7 @@ class Square:
     """
         same as the classes before but this one has an area
     """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """
         initialises size and checks if size is above 0 and if size is an int
         :param size:
