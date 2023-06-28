@@ -2,22 +2,26 @@
 """
 this module defines a Square class
 """
+
+
 class Square:
     """
         same as the classes before but this one has an area
     """
-    def __init__(self, size):
-        pass
-    """
-    initialises size and checks if size is above 0 and if size is an integer
-    :param size: size value that has been validated
-    """
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
-    self.__size = size
+    def __init__(self, size=0):
+        """
+        initialises size and checks if size is above 0 and if size is an int
+        :param size:
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
+    """
+    getter for size
+    """
     @property
     def size(self):
         """
@@ -26,6 +30,9 @@ class Square:
         """
         return self.__size
 
+    """
+    setter for size
+    """
     @size.setter
     def size(self, value):
         """
