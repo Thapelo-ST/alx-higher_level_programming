@@ -11,23 +11,23 @@ class Square:
         calculates area
         prints square
     """
-    def __init__(self, size=0, position=(0, 0)):
-        pass
-    """
-    initialises size and checks if size is above 0 and if size is an integer
-    :param size: size value that has been validated
-    """
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
-    self.__size = size
 
-    if not isinstance(position, tuple) or len(position) != 2 or not all(
-           isinstance(coord, int) for coord in position)
-    or not all(coord >= 0 for coord in position):
-        raise TypeError("position must be a tuple of 2 positive integers")
-    self.__position = position
+    def __init__(self, size=0, position=(0, 0)):
+        """
+        initialises size and checks if size is above 0 and if size is an int
+        :param size:
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
+
+        if not isinstance(position, tuple) or len(position) != 2 or not all(
+           isinstance(coord, int) for coord in position)\
+                or not all(coord >= 0 for coord in position):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = position
     """the place for property getters and setters starts here"""
     @property
     def size(self):
@@ -65,8 +65,8 @@ class Square:
         :return:
         """
         if not isinstance(value, tuple) or len(value) != 2 or not all(
-                isinstance(coord, int) for coord in value) or not
-        all(coord >= 0 for coord in value):
+                isinstance(coord, int) for coord in value) or not \
+                all(coord >= 0 for coord in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
         """the place for property getters and setters ends here here"""
@@ -87,7 +87,7 @@ class Square:
         :return:
         """
         if self.__size == 0:
-            print("\n")
+            print()
         for _ in range(self.__size):
             print('#' * self.__size)
         for _ in range(self.__size):
