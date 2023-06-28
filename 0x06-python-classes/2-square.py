@@ -2,6 +2,8 @@
 """
 this module defines a Square class
 """
+
+
 class Square:
     """
     this is the class that is based on the one before, they are all squares.
