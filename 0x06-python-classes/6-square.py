@@ -2,6 +2,8 @@
 """
 this module defines a Square class
 """
+
+
 class Square:
     """
         same as the classes before but this one has:
@@ -24,8 +26,7 @@ class Square:
         self.__size = size
 
         if not isinstance(position, tuple) or len(position) != 2 or not all(
-           isinstance(coord, int) for coord in position)\
-                or not all(coord >= 0 for coord in position):
+                isinstance(coord, int) and coord >= 0 for coord in position):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     """the place for property getters and setters starts here"""
@@ -88,7 +89,8 @@ class Square:
         """
         if self.__size == 0:
             print()
-        for _ in range(self.__size):
-            print('#' * self.__size)
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+        else:
+            for _ in range(self.__position[1]):
+                print()
+            for _ in range(self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
