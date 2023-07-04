@@ -1,0 +1,79 @@
+============================
+How to use 3-say_my_name.py
+============================
+
+this function prints a name followed by another one unless other wise
+
+Importing document and function:
+================================
+::
+    >>> say_it = __import__("3-say_my_name").say_my_name
+
+::
+    >>> m = __import__("3-say_my_name").__doc__
+    >>> len(m) > 1
+    True
+
+using the function:
+===================
+using without any arguments
+::
+    >>> say_it()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+using it with a number:
+::
+    >>> say_it(98)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+::
+    >>> say_it(938098193821)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+::
+    >>> say_it(['john'])
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+using it with a non-string last name:
+::
+    >>> say_it("doe",['john'])
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+::
+    >>> say_it("john", 123)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+using with no last name:
+::
+    >>> say_it("Test_driven", )
+    My name is Test_driven
+
+::
+    >>> say_it("Taps", )
+    My name is Taps
+
+::
+    >>> say_it("development")
+    My name is development
+
+using with valid input:
+::
+    >>> say_it("Test-Driven", "Development")
+    My name is Test-Driven Development
+
+::
+    >>> say_it("Dell", "Lattitude|E5430")
+    My name is Dell Lattitude|E5430
+

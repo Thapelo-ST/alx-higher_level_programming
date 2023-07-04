@@ -1,0 +1,106 @@
+============================
+How to use 5-text_indentation.py
+============================
+
+This function is very simple to use it takes a paragraph or a sentence,
+and splits it into a single line when it encounters:
+- a full-stop = .
+- a hyphen = :
+- a question mark = ?
+
+Import function/module and doc string:
+======================================
+::
+    >>> delims = __import__("5-text_indentation").text_indentation
+
+::
+    >>> m = __import__("5-text_indentation").__doc__
+    >>> len(m) > 1
+    True
+
+Testing the function:
+=====================
+valid inputs:
+::
+    >>> delims("This is a sentence. Another sentence: And a question?")
+    This is a sentence.
+
+    Another sentence:
+
+    And a question?
+
+::
+    >>> delims("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+    nam modo... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+    ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+    ... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+    ... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+    ... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+    ... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+    ... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+    ... beatiorem! Iam ruinas videres""")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    Quonam modo?
+
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+
+    Non autem hoc:
+
+    igitur ne illud quidem.
+
+    Fortasse id optimum, sed ubi illud:
+
+    Plus semper voluptatis?
+
+    Teneo, inquit, finem illi videri nihil dolere.
+
+    Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+
+    Si id dicis, vicimus.
+
+    Inde sermone vario sex illa a Dipylo stadia confecimus.
+
+    Sin aliud quid voles, postea.
+
+    Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+
+    Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+testing with an empty string:
+::
+    >>> delims("")
+
+    >>>
+
+testing with non string inputs:
+::
+    >>> delims(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+::
+    >>> delims(['this is a sententce? with all: delims.'])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+testing with sentence without punctuations:
+::
+    >>> delims("this is just a simple text, why is it 98 Battery Street")
+    this is just a simple text, why is it 98 Battery Street
+
+complex punctuation:
+::
+    >>> delims("this is a (complex) sentence !! but easy")
+    this is a (complex) sentence !! but easy
+
+::
+    >>> delims(""" tooo much :::::: punctuation ......... or is it ?????????????""")
+     tooo much :
+
+     punctuation .
+
+     or is it ?
+
