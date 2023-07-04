@@ -17,9 +17,23 @@ import sys
 
 def print_board(board):
     n = len(board)
+    print("[", end="")
+    for i in range(n):
+        print("[", end="")
+        for j in range(n):
+            print(board[i][j], end="")
+            if j != n -1:
+                print(", ", end="")
+        print("]", end="")
+        if j != n - 1:
+            print(", ", end="")
+    print("]")
+    """        
     for row in board:
         print(row)
     print()
+    """
+
 
 def solution(board, ans, n):
     queens = []
