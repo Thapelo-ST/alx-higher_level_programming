@@ -22,18 +22,12 @@ def print_board(board):
         print("[", end="")
         for j in range(n):
             print(board[i][j], end="")
-            if j != n -1:
+            if j != n - 1:
                 print(", ", end="")
         print("]", end="")
-        if j != n - 1:
+        if i != n - 1:
             print(", ", end="")
     print("]")
-    """        
-    for row in board:
-        print(row)
-    print()
-    """
-
 
 def solution(board, ans, n):
     queens = []
@@ -107,3 +101,4 @@ if __name__ == '__main__':
     solutions = solve_nqueens(N)
     for solution in solutions:
         print_board(solution)
+
