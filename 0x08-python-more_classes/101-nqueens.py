@@ -15,12 +15,13 @@
 """
 import sys
 
-
 def printSolution(board):
-    for row in board:
-        print(row)
-    print()
-
+    solution = []
+    for i in range(len(board)):
+        for j in range(len(board)):
+            if board[i][j] == 1:
+                solution.append([i, j])
+    print(solution)
 
 def isSafe(board, row, col):
     # Check if there is a queen in the same row
@@ -44,7 +45,6 @@ def isSafe(board, row, col):
         j -= 1
 
     return True
-
 
 def solveNQUtil(board, col, solutions):
     if col >= len(board):
@@ -71,8 +71,7 @@ def solveNQueens(n):
     solveNQUtil(board, 0, solutions)
 
     for solution in solutions:
-        print(solution)
-
+        printSolution(solution)
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
