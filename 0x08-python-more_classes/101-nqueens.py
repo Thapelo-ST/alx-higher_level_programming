@@ -112,5 +112,13 @@ if __name__ == '__main__':
 
     solutions = solve_nqueens(N)
     for solution in solutions:
-        print_board(solution)
+        ans = []
+        for i in range(len(solution)):
+            ans.append(solution[i])
+            if (i + 1) % n == 0:
+                print(ans)
+                ans = []
+        if ans:
+            print(ans)
+
 
