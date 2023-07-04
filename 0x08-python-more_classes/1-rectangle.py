@@ -47,8 +47,8 @@ class Rectangle:
     def width(self, value):
         """
         this is a setter for width
-        :param value:
-        :return self.__width:
+        :param: value and integer
+        :return: width assigned
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")

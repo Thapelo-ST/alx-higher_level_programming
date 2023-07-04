@@ -13,7 +13,7 @@ class Rectangle:
         self.__height = height
         self.__width = width
 
-    """ property getters and setters here """
+    # Property getters and setters here
     @property
     def height(self):
         """

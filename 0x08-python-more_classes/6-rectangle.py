@@ -87,7 +87,7 @@ class Rectangle:
             perimeter = 2 * (self.__width + self.__height)
         return perimeter
 
-    """printing the rectangle"""
+    # Printing the rectangle
     def __str__(self):
         """
         prints the # according to the width and height of the rectangle
@@ -109,5 +109,6 @@ class Rectangle:
 #        return super().__repr__()
 
     def __del__(self):
+
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

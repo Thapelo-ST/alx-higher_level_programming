@@ -77,7 +77,7 @@ class Rectangle:
             perimeter = 2 * (self.__width + self.__height)
         return perimeter
 
-    """printing the rectangle"""
+    #printing the rectangle"""
     def __str__(self):
         """
         prints the # according to the width and height of the rectangle

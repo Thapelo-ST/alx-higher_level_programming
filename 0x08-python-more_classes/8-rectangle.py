@@ -17,7 +17,7 @@ class Rectangle:
         self.__width = width
         Rectangle.number_of_instances += 1
 
-    # property getters and setters here
+    # property getters and setters starts here
     @property
     def height(self):
         """
@@ -59,6 +59,8 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
+    # property getters and setter end here
 
     # calculating an area of a rectangle
     def area(self):

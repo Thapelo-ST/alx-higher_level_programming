@@ -60,6 +60,8 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    # property getters and setters end her
+
     # calculating an area of a rectangle
     def area(self):
         """

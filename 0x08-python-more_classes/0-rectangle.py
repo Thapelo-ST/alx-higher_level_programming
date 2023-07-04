@@ -7,6 +7,6 @@ this module defines a rectangle class
 
 class Rectangle:
     """
-        this class is just defining an empty class
+        :module description: this class is just defining an empty class
     """
     pass

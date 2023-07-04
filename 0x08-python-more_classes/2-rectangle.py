@@ -18,7 +18,7 @@ class Rectangle:
     def height(self):
         """
         this is a getter for width
-        :return self.__width:
+        :return:
         """
         return self.__height
 

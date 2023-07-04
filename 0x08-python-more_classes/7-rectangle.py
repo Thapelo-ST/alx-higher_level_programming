@@ -17,12 +17,12 @@ class Rectangle:
         self.__width = width
         Rectangle.number_of_instances += 1
 
-    """ property getters and setters here """
+    # property getters and setters here
     @property
     def height(self):
         """
         this is a getter for width
-        :return self.__width:
+        :return: declared width
         """
         return self.__height
 
@@ -30,8 +30,8 @@ class Rectangle:
     def height(self, value):
         """
         this is a setter for height
-        :param value:
-        :return self.__height:
+        :param: value and integer
+        :return: height
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -43,7 +43,7 @@ class Rectangle:
     def width(self):
         """
         this is a getter fot width
-        :return self.__width:
+        :return: declared width
         """
         return self.__width
 
@@ -51,8 +51,8 @@ class Rectangle:
     def width(self, value):
         """
         this is a setter for width
-        :param value:
-        :return self.__width:
+        :param: value and integer
+        :return: width
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -60,24 +60,22 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    """ 
-    calculating an area of a rectangle
-    """
+    # Calculating an area of a rectangle
     def area(self):
         """
         calculating an area of a rectangle
-        :return:
+        :return: area of a rectangle
         """
         area = self.__width * self.__height
         return area
 
-    """
-    calculating the perimeter of a rectangle
-    """
+    # Calculating the perimeter of a rectangle
+
+
     def perimeter(self):
         """
         calculating a perimeter of a rectangle
-        :return:
+        :return: perimeter of a rectangle
         """
         if self.__width == 0 or self.__height == 0:
             perimeter = 0
@@ -89,7 +87,7 @@ class Rectangle:
     def __str__(self):
         """
         prints the # according to the width and height of the rectangle
-        :return rectangle_string:
+        :return: a rectangle in a form of a string
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -101,14 +99,14 @@ class Rectangle:
     def __repr__(self):
         """
         prints the string representation of the rectangle object
-        :return:
+        :return: undecorated print
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """
         prints Bye rectangle ...  everytime an instance is deleted
-        :return:
+        :return: bye rectangle
         """
         Rectangle.number_of_instances -= 1
         print(f"Bye rectangle...")
