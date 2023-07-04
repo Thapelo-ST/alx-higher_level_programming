@@ -31,10 +31,14 @@
 import sys
 
 def print_board(board):
-    n = len(board)
     for row in board:
-        print(row)
-    print()
+        print("[", end="")
+        for i in range(len(row)):
+            print(row[i], end="")
+            if i != len(row) - 1:
+                print(", ", end="")
+        print("]")
+
 
 
 def solution(board, ans, n):
