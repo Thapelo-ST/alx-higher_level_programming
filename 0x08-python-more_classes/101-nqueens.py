@@ -115,7 +115,7 @@ if __name__ == '__main__':
         ans = []
         for i in range(len(solution)):
             ans.append(solution[i])
-            if (i + 1) % n == 0:
+            if (i + 1) % N == 0:
                 print(ans)
                 ans = []
         if ans:
