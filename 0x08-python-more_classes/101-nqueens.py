@@ -13,21 +13,29 @@
     Where [[r,c], [r,c]]
     r - row and  c - column
 """
+#!/usr/bin/python3
+"""
+    The N queens puzzle is the challenge of placing N non-attacking queens
+    on an N×N chessboard.
+    This program solves the N queens problem.
+
+    The program must and can be only be run this way.
+
+    if not it will produce this error
+
+    The solution is presented in this way
+
+    Where [[r,c], [r,c]]
+    r - row and  c - column
+"""
 import sys
 
 def print_board(board):
     n = len(board)
-    print("[", end="")
-    for i in range(n):
-        print("[", end="")
-        for j in range(n):
-            print(board[i][j], end="")
-            if j != n - 1:
-                print(", ", end="")
-        print("]", end="")
-        if i != n - 1:
-            print(", ", end="")
-    print("]")
+    for row in board:
+        print(row)
+    print()
+
 
 def solution(board, ans, n):
     queens = []
