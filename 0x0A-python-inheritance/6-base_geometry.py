@@ -5,6 +5,9 @@ base geometry class filled with area() that raises an exception
 
 
 class BaseGeometry:
+    """
+    empty class
+    """
     pass
 
     """
