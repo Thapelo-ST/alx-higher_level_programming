@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 function returns a list of avaliable attributes and methods of objects
 """

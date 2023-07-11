@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 that returns True if the object is an instance of a class
 that inherited (directly or indirectly)

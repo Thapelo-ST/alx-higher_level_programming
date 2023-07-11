@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 base geometry class filled with area() that raises an exception
                     filled with int validator that validates if input is int
@@ -27,4 +28,3 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-
