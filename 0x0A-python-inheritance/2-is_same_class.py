@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 module that checks if the object is from the same class or not
 """
