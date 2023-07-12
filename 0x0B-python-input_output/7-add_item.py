@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import sys
-import json
-from os.path import exists
 """
 creates an object as a json file
 """
+import sys
+import json
+from os.path import exists
 
 
 def load_from_json_file(filename):

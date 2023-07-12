@@ -8,7 +8,8 @@ def read_file(filename=""):
     """
     Read a text file and print its contents to stdout.
     Args:
-        filename (str): The name of the file to read (default is an empty string).
+        filename (str): The name of the file to read
+        (default is an empty string).
 
     Returns:
         None

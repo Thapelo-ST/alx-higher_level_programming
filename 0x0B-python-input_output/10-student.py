@@ -16,7 +16,9 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
+    """
+    converts string to json
+    """
     def to_json(self, attrs=None):
         """
             Retrieve a dictionary representation of a Student instance.
