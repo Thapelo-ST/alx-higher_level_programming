@@ -2,6 +2,9 @@
 import sys
 import json
 from os.path import exists
+"""
+creates an object as a json file
+"""
 
 
 def load_from_json_file(filename):
@@ -17,6 +20,11 @@ def load_from_json_file(filename):
     with open(filename, 'r') as file:
         data = json.load(file)
     return data
+
+
+"""
+save an object as a json file
+"""
 
 
 def save_to_json_file(obj, filename):

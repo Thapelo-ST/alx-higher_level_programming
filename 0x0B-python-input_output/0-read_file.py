@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+used to read files from input
+"""
+
+
 def read_file(filename=""):
     """
     Read a text file and print its contents to stdout.

@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+appends content into file
+"""
+
+
 def append_write(filename="", text=""):
     """
     Append a string at the end of a text file (UTF8) and return the
