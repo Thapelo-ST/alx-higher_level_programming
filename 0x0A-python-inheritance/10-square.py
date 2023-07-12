@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 base geometry class filled with area() that raises an exception
                     filled with int validator that validates if input is int
@@ -26,6 +27,9 @@ class that inherits from base geometry
 
 
 class Rectangle(BaseGeometry):
+    """
+    class that inherits from base geometry
+    """
     def __init__(self, width, height):
         """
         initialises the variables passed
@@ -54,6 +58,9 @@ square class that inherits from rectangle
 
 
 class Square(Rectangle):
+    """
+    square class that inherits from rectangle
+    """
     def __init__(self, size):
         """
         initialises the variables passed

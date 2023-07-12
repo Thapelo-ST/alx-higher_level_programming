@@ -26,6 +26,9 @@ class that inherits from base geometry
 
 
 class Rectangle(BaseGeometry):
+    """
+    class that inherits variables from parent class Base geometry
+    """
     def __init__(self, width, height):
         """
         initialises the variables passed

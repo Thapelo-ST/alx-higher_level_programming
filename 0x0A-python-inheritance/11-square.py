@@ -23,6 +23,9 @@ class that inherits from base geometry
 
 
 class Rectangle(BaseGeometry):
+    """
+    class that inherits from base geometry
+    """
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
@@ -42,6 +45,9 @@ square class that inherits from rectangle
 
 
 class Square(Rectangle):
+    """
+    square class that inherits from rectangle
+    """
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
