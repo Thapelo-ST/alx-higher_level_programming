@@ -1,0 +1,65 @@
+=====================
+how to use my_list.py
+=====================
+
+this module prints a list in an orderd value from random to normal
+
+import and store list:
+======================
+::
+    >>> my_list = __import__("1-my_list").MyList
+
+importing documentation:
+::
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m)>1
+    True
+
+using with numbers:
+::
+    >>> ML = my_list([3, 1, 2, 5, 4])
+    >>> ML.print_sorted()
+    [1, 2, 3, 4, 5]
+
+::
+    >>> ML = my_list([10, 3000, 4263232, 873928323873, 0, -1])
+    >>> ML.print_sorted()
+    [-1, 0, 10, 3000, 4263232, 873928323873]
+
+using with strings:
+::
+    >>> ML = my_list(['c', 'a', 'd', 'b'])
+    >>> ML.print_sorted()
+    ['a', 'b', 'c', 'd']
+
+::
+    >>> ML = my_list(['december', 'januarry', 'september', '98 Battery street', 'Python > C'])
+    >>> ML.print_sorted()
+    ['98 Battery street', 'Python > C', 'december', 'januarry', 'september']
+
+using with tuples:
+::
+    >>> ML = my_list([(9, 6),(98, 101),(0x0B, 0x0A, 0x0F)])
+    >>> ML.print_sorted()
+    [(9, 6), (11, 10, 15), (98, 101)]
+
+overloaded use:
+::
+    >>> ML = my_list([(9, 6),(98, 101),(0x0B, 0x0A, 0x0F)], ['december', 'januarry', 'september', '98 Battery street', 'Python > C'])
+    Traceback (most recent call last):
+        ...
+    TypeError: list expected at most 1 argument, got 2
+
+using with empty and one variable
+::
+    >>> ML = my_list([ ])
+    >>> ML.print_sorted()
+    []
+
+::
+    >>> ML = my_list([1, ])
+    >>> ML.print_sorted()
+    [1]
+
+
+

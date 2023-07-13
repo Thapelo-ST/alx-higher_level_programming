@@ -1,0 +1,92 @@
+========================
+how to use Base Geometry
+========================
+
+checks if the values added are integers and greater than 0
+
+how to Import the module
+========================
+::
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+store the module:
+
+::
+    >>> bg = BaseGeometry()
+
+importing documentation
+=======================
+::
+    >>> m = __import__("7-base_geometry").__doc__
+    >>> len(m) > 1
+    True
+
+
+using the function
+==================
+with negetive value:
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", -12)
+    Traceback (most recent call last):
+        ...
+    ValueError: my_int must be greater than 0
+
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(-12, "string")
+    Traceback (most recent call last):
+        ...
+    TypeError: -12 must be an integer
+
+using with non-integer values:
+
+::
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", "string")
+    Traceback (most recent call last):
+        ...
+    TypeError: age must be an integer
+
+::
+    >>> bg.integer_validator('12345', "98 street")
+    Traceback (most recent call last):
+        ...
+    TypeError: 12345 must be an integer
+
+using with valid inputs:
+
+::
+    >>> bg.integer_validator(12345, 98)
+
+::
+    >>> bg.integer_validator('12345', 98)
+
+::
+    >>> bg.integer_validator('py is cool', 98)
+
+using with big numbers and long strings:
+::
+    >>> bg.integer_validator('py is cool because you can do anything lets do', 989091323920930234902384823492380493204932)
+
+using with lists and tuples:
+::
+    >>> bg.integer_validator('py is cool', [98])
+    Traceback (most recent call last):
+        ...
+    TypeError: py is cool must be an integer
+
+::
+    >>> bg.integer_validator('Holbetorn', [98, 78, 0])
+    Traceback (most recent call last):
+        ...
+    TypeError: Holbetorn must be an integer
+
+::
+    >>> bg.integer_validator('Holbetorn', (89, 98, 11))
+    Traceback (most recent call last):
+        ...
+    TypeError: Holbetorn must be an integer
+
+::
+    >>> bg.integer_validator((89, 98, 11), 98)
