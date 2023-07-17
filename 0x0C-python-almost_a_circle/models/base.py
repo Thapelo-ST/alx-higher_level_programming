@@ -67,6 +67,14 @@ class Base:
         return json.loads(json_string)
 
     """
+    this is the update method for base
+    """
+
+    def update(self, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    """
     returns an instance with all attributes already set
     """
     @classmethod
