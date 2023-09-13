@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
 class Rectangle {
-	constructor(name) {
-		this.name = name;
-	}
+    constructor(name) {
+
+    }
 }
 
-module.exports.Rectangle = Rectangle;
+module.exports = Rectangle;
