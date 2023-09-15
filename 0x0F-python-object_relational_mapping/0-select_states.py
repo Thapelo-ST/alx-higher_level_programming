@@ -26,10 +26,9 @@ if __name__ == "__main__":
             print(row)
 
     except MySQLdb.Error as e:
-        print(f"Error: {e}")
+        print("Error: {}".format(e))
     finally:
         if 'cursor' in locals():
             cursor.close()
         if 'connection' in locals():
             connection.close()
-
