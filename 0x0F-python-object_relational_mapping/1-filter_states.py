@@ -1,12 +1,15 @@
 #!/usr/bin/python3
+"""
+    filter states by the N
+"""
+
 import MySQLdb
 import sys
+if __name__ == "__main__":
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
 
-mysql_username = sys.argv[1]
-mysql_password = sys.argv[2]
-database_name = sys.argv[3]
-
-try:
     connection = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -24,11 +27,5 @@ try:
     for row in rows:
         print(row)
 
-except MySQLdb.Error as e:
-    print(f"Error: {e}")
-finally:
-    if 'cursor' in locals():
-        cursor.close()
-    if 'connection' in locals():
-        connection.close()
-
+    cursor.close()
+    connection.close()

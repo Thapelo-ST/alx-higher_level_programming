@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+    filter states by the input of the user
+"""
+
 import MySQLdb
 import sys
 
