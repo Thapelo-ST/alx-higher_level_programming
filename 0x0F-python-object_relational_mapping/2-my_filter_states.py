@@ -6,36 +6,34 @@
 import MySQLdb
 import sys
 
-mysql_username = sys.argv[1]
-mysql_password = sys.argv[2]
-database_name = sys.argv[3]
-filter_name = sys.argv[4]
+if __name__ == "__main__":
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+    filter_name = sys.argv[4]
 
-try:
-    connection = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=mysql_username,
-        passwd=mysql_password,
-        db=database_name
-    )
+    try:
+        connection = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=mysql_username,
+            passwd=mysql_password,
+            db=database_name
+        )
 
-    cursor = connection.cursor()
+        cursor = connection.cursor()
 
-    query = ("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-             .format(filter_name,))
-    cursor.execute(query)
+        query = ("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+                 .format(filter_name,))
+        cursor.execute(query)
 
-    rows = cursor.fetchall()
+        rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+        for row in rows:
+            print(row)
 
-except MySQLdb.Error as e:
-    print(f"Error: {e}")
-finally:
-    if 'cursor' in locals():
+    except MySQLdb.Error as e:
+        print(f"Error: {e}")
+    finally:
         cursor.close()
-    if 'connection' in locals():
         connection.close()
-
