@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
+"""
+    list_states a module or function that prints all states by id order
+"""
 
-if __name__ == "__main__":
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
 
+def list_states(mysql_username, mysql_password, database_name):
+    """
+        list_states a module or function that prints all states by id order
+    """
     try:
         connection = MySQLdb.connect(
             host="localhost",
@@ -26,9 +29,22 @@ if __name__ == "__main__":
             print(row)
 
     except MySQLdb.Error as e:
-        print("Error: {}".format(e))
+        print(f"Error: {e}")
     finally:
         if 'cursor' in locals():
             cursor.close()
         if 'connection' in locals():
             connection.close()
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python list_states.py "
+              "<mysql_username> <mysql_password> <db_name>")
+        sys.exit(1)
+
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+
+    list_states(mysql_username, mysql_password, database_name)
