@@ -32,3 +32,4 @@ if __name__ == "__main__":
             cursor.close()
         if 'connection' in locals():
             connection.close()
+
