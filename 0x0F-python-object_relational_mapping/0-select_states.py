@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
 """
     list_states a module or function that prints all states by id order
 """
+import sys
+import MySQLdb
 
 
 def list_states(mysql_username, mysql_password, database_name):
