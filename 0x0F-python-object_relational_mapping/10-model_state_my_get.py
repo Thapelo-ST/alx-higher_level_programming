@@ -16,8 +16,9 @@ if __name__ == "__main__":
     search_name = sys.argv[4]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                           .format(mysql_username, mysql_password, database_name),
-                           pool_pre_ping=True)
+                           .format(mysql_username,
+                                   mysql_password,
+                                   database_name), pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     session = Session()
