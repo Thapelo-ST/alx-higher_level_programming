@@ -14,9 +14,9 @@ def find_peak(list_of_integers):
     length = len(list_of_integers)
     mid = length // 2
     """
-        # Check if the element at the midpoint is a peak 
+        # Check if the element at the midpoint is a peak
             by comparing it with its neighbors.
-        # If it's greater than or equal to both the left 
+        # If it's greater than or equal to both the left
             and right neighbors, it's a peak.
     """
     if ((mid == 0 or list_of_integers[mid] >= list_of_integers[mid - 1]) and
