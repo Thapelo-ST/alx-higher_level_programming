@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+module that sends a request from a given url and displays values of
+X-Request-Id found in the header response
+"""
 import urllib.request
 import sys
 

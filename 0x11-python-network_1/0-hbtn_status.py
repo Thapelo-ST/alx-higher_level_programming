@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+fetches a link and displays its body properties
+"""
 import urllib.request
 
 if __name__ == "__main__":
