@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+displays id using the github creditials provided
+
+Ussage: ./10-my_github.py <username> <password>
+"""
 import requests
 import sys
 
