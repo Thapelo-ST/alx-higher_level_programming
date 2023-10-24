@@ -3,7 +3,7 @@
 const request = require('request');
 
 if (process.argv.length !== 3) {
-  console.error('Usage: node starwarsmovie.js <movie_id>');
+  console.error('Usage: node 3starwars_title.js <movie_id>');
   process.exit(1);
 }
 
@@ -15,6 +15,6 @@ request(apiUrl, (error, response, body) => {
     console.error(error);
   } else if (response.statusCode === 200) {
     const movieData = JSON.parse(body);
-    console.log(`Title: ${movieData.title}`);
+    console.log(`${movieData.title}`);
   }
 });

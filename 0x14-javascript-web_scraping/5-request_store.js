@@ -18,11 +18,7 @@ request(url, (error, response, body) => {
     fs.writeFile(filePath, body, 'utf-8', (err) => {
       if (err) {
         console.error(err);
-      } else {
-        console.log(`Web content has been stored in ${filePath}`);
       }
     });
-  } else {
-    console.error(`Failed to retrieve webpage content. Status code: ${response.statusCode}`);
   }
 });

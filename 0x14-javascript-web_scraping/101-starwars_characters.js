@@ -20,9 +20,7 @@ request(apiUrl, (error, response, body) => {
       request(characterUrl, (charError, charResponse, charBody) => {
         if (!charError && charResponse.statusCode === 200) {
           const characterData = JSON.parse(charBody);
-          console.log(`${index + 1}. ${characterData.name}`);
-        } else {
-          console.error(`Failed to retrieve character data. URL: ${characterUrl}`);
+          console.log(`${characterData.name}`);
         }
       });
     });
